@@ -1,8 +1,15 @@
-var donut =document.createElement("cookie");
-donut.innerHTML ="Give me the cookie";
-var body = document.getElementsByTagName("body")[0]
-body.appendChild(donut);
 
+
+const donut =document.createElement("cookie");
+donut.innerHTML ="Give me the cookie";
+
+const body = document.getElementsByTagName("body")[0]
+body.appendChild(donut);;
+
+donut.addEventListener ("click", function() {
+    alert("did something");
+});
+//
 // *//
 // // 1. Create the button
 // var button = document.createElement("button");
