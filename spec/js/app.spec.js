@@ -1,25 +1,26 @@
 
+const donutMaker = new donutMaker();
+const donutCount = document.querySelector(".donut-count")
+const clickButton = document.querySelector(".click-counter");
 
-const donut =document.createElement("cookie");
-donut.innerHTML ="Give me the cookie";
+clickButton.addEventListener("click",()=>{
+    donutMaker.recordClick();
+    wiringHelper.updateDonutCountDisplay(donutCount);
+})
 
-const body = document.getElementsByTagName("body")[0]
-body.appendChild(donut);;
+const updateDonutCount = () => {
+    donutCount.innerHTML = donutMaker.getDonutCount();
+}
 
-donut.addEventListener ("click", function() {
-    alert("did something");
-});
+
+
+// const donut =document.createElement("cookie");
+// donut.innerHTML ="Button";
 //
-// *//
-// // 1. Create the button
-// var button = document.createElement("button");
-// button.innerHTML = "Do Something";
+// const body = document.getElementsByTagName("body")[0]
+// body.appendChild(donut);;
 //
-// // 2. Append somewhere
-// var body = document.getElementsByTagName("body")[0];
-// body.appendChild(button);
-//
-// // 3. Add event handler
-// button.addEventListener ("click", function() {
+// donut.addEventListener ("click", function() {
 //     alert("did something");
-// });//
+// });
+//
