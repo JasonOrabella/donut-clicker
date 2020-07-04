@@ -13,17 +13,23 @@ https://codereview.stackexchange.com/questions/179187/my-own-cookie-clicker-game
 // activateAutoClickers(){
 
     class donutBuilding{
-        constructor(name,donutPrice,upgradeFunction){
+        constructor(name,donutPrice,upgradeLevel,upgradeFunction){
             this.name = new name;
     this.donutPrice= new donutPrice;
+    this.upgradeLevel = new upgradeLevel;
     this.upgradeFunction = new upgradeFunction
     
         }
     }
 this.name =autoClicker;
 this.donutPrice= 100;
+this.upgradeLevel=0;
 this.upgradeFunction= donutAutoClicker;
 
+//level should increase by 1
+//donut price should increase by +=10%
+upgradeLevel+=1;
+donutPrice+=10%;
 
 
 
