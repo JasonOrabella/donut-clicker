@@ -12,6 +12,18 @@ https://codereview.stackexchange.com/questions/179187/my-own-cookie-clicker-game
 // }
 // activateAutoClickers(){
 
+    class donutBuilding{
+        constructor(name,donutPrice,upgradeFunction){
+            this.name = new name;
+    this.donutPrice= new donutPrice;
+    this.upgradeFunction = new upgradeFunction
+    
+        }
+    }
+this.name =autoClicker;
+this.donutPrice= 100;
+this.upgradeFunction= donutAutoClicker;
+
 
 
 
@@ -25,3 +37,4 @@ https://codereview.stackexchange.com/questions/179187/my-own-cookie-clicker-game
             }
         }, 1000);
     }
+
