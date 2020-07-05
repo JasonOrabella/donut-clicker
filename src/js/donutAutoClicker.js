@@ -22,37 +22,52 @@ https://codereview.stackexchange.com/questions/179187/my-own-cookie-clicker-game
         }
     }
 this.name =autoClicker;
-this.donutPrice= 100;
+this.donutPrice= 10;
 this.upgradeLevel=0;
 this.upgradeFunction= donutAutoClicker;
 
 
-autoClick.addEventListener("click",()=>{
-  autoClick.recordclick();
-  wiringHelper.updateDonutCountDisplay(donutMaker);
-})
+setInterval(function(){
+     _donutCount+=upgradeLevel ; }, 1000);
+
+// const interval = (autoClicker, element) => {
+//     let i = 0;
+//     setInterval(() => {
+//         element.innerText = autoClicker[i];
+//         i++;
+//         if (i == autoClicker.length) {
+//             i = 0;
+//         }
+//     }, 1000);
+// }
+
+autoClickButton.addEventListener("click", () => {
+    autoClickButton.recordClick();
+    wiringHelper.updateDonutCountDisplay(donutCount);
+  });
+  
 // 
 // level should increase by 1
 // donut price should increase by +=10%
-if autoClick && _cookieamount >= donutPrice {
+if (autoClickButton && _donutCount >= donutPrice) {
 this.upgradeLevel+=1;
 this.donutPrice*=1.1;
+this._donutCount - donutPrice;
 }
-then {
+else {
 
-))
+}
 
 
-    const donutAutoClicker = (autoClicker, element) => {
-        //donut amount +1 
-        
-        let i = 0;
-        setInterval(() => {
-            element.innerText = autoClicker[i];
-            i++;
-            if (i == autoClicker.length) {
-                i = 0;
-            }
-        }, 1000);
-    }
+
+    // const donutAutoClicker = (autoClicker, element) => {
+    //     let i = 0;
+    //     setInterval(() => {
+    //         element.innerText = autoClicker[i];
+    //         i++;
+    //         if (i == autoClicker.length) {
+    //             i = 0;
+    //         }
+    //     }, 1000);
+    // }
 
