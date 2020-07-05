@@ -26,18 +26,26 @@ this.donutPrice= 100;
 this.upgradeLevel=0;
 this.upgradeFunction= donutAutoClicker;
 
-//level should increase by 1
-//donut price should increase by +=10%
-// if click (object) && cookie amount >= donutPrice{
-// upgradeLevel+=1;
-// donutPrice+=10%;
-// }
-// then {
 
-// ))
+autoClick.addEventListener("click",()=>{
+  autoClick.recordclick();
+  wiringHelper.updateDonutCountDisplay(donutMaker);
+})
+// 
+// level should increase by 1
+// donut price should increase by +=10%
+if autoClick && _cookieamount >= donutPrice {
+this.upgradeLevel+=1;
+this.donutPrice*=1.1;
+}
+then {
+
+))
 
 
     const donutAutoClicker = (autoClicker, element) => {
+        //donut amount +1 
+        
         let i = 0;
         setInterval(() => {
             element.innerText = autoClicker[i];

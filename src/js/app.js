@@ -10,7 +10,3 @@ clickButton.addEventListener("click", () => {
   wiringHelper.updateDonutCountDisplay(donutCount);
 });
 
-// donutAutoClicker.addEventListener("click",()=>{
-//   donutAutoClicker.recordclick();
-//   wiringHelper.updateDonutCountDisplay(donutCount);
-// })
