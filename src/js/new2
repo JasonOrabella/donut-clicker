@@ -1,0 +1,11 @@
+donutIntervalguy = (donutMaker, element) => {
+    let i = 0;
+    setInterval(() => {
+        element.innerText = namesToDisplay[i];
+        i++;
+        if (i == donutMaker.length) {
+            i = 0;
+        }
+    }, 1000);} 
+
+    

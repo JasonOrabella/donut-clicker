@@ -15,20 +15,35 @@ clickButton.addEventListener("click", () => {
 });
 
 autoClickButton.addEventListener("click", () => {
+  // donutMaker.recordClick();
+  wiringHelper.updateDonutCountDisplay(donutCount);
+var  donutIntervalguy = (donutMaker, element) => {
+  document.title = donutCount + 'donuts'
+    let i = 0;
+    setInterval(() => {
+        element.innerText = donutMaker[i];
+        i++;
+        if (i == donutMaker.length) {
+            i = 0;
+        }
+    }, 1000);} 
+})
+    // wiringHelper.updateDonutCountDisplay(donutCount);
+  // })
  //donutAC.recordClick2();
  //donutMaker.recordClick();
  //while (true){
   //donutMaker.recordClick();
   //donutMaker.recordClick();
-  myVar = setInterval(donutMaker.recordClick(),1000);
+  // myVar = setInterval(donutMaker.recordClick(),1000);
   // myVar = setTimeout(1000);
-  wiringHelper.updateDonutCountDisplay(donutCount);
+
 // }
 
   // setInterval(function(){
   //   donutMaker.recordClick(); }, 1000);
   // wiringHelper.updateDonutCountDisplay(donutCount);
-});
+// });
 
 
 // function alertFunc() {
