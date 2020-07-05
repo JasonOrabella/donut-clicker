@@ -5,14 +5,7 @@
 
 https://codereview.stackexchange.com/questions/179187/my-own-cookie-clicker-game
 
-// autoclicker()=>{ 
-//     setInterval(function){
-
-//     }
-// }
-// activateAutoClickers(){
-
-    class donutBuilding{
+    class donutAutoClicker{
         constructor(name,donutPrice,upgradeLevel,upgradeFunction){
             this.name = new name;
     this.donutPrice= new donutPrice;
@@ -21,25 +14,24 @@ https://codereview.stackexchange.com/questions/179187/my-own-cookie-clicker-game
     
         }
     }
+
 this.name =autoClicker;
 this.donutPrice= 10;
 this.upgradeLevel=0;
-this.upgradeFunction= donutAutoClicker;
+this.upgradeFunction= autoClicker;
+
+if (autoClickButton && _donutCount >= donutPrice) {
+    this.upgradeLevel+=1;
+    this.donutPrice*=1.1;
+    this._donutCount - donutPrice;
+    }
+    else {
+    
+    }
 
 
 setInterval(function(){
-     _donutCount+=upgradeLevel ; }, 1000);
-
-// const interval = (autoClicker, element) => {
-//     let i = 0;
-//     setInterval(() => {
-//         element.innerText = autoClicker[i];
-//         i++;
-//         if (i == autoClicker.length) {
-//             i = 0;
-//         }
-//     }, 1000);
-// }
+     _donutCount+=1*upgradeLevel ; }, 1000);
 
 autoClickButton.addEventListener("click", () => {
     autoClickButton.recordClick();
@@ -49,14 +41,7 @@ autoClickButton.addEventListener("click", () => {
 // 
 // level should increase by 1
 // donut price should increase by +=10%
-if (autoClickButton && _donutCount >= donutPrice) {
-this.upgradeLevel+=1;
-this.donutPrice*=1.1;
-this._donutCount - donutPrice;
-}
-else {
 
-}
 
 
 
