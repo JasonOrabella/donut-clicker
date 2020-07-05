@@ -15,10 +15,8 @@ clickButton.addEventListener("click", () => {
 });
 
 autoClickButton.addEventListener("click", () => {
-  // donutMaker.recordClick();
   wiringHelper.updateDonutCountDisplay(donutCount);
-var  donutIntervalguy = (donutMaker, element) => {
-  document.title = donutCount + 'donuts'
+ donutIntervalguy = (donutMaker, element) => {
     let i = 0;
     setInterval(() => {
         element.innerText = donutMaker[i];
@@ -26,7 +24,7 @@ var  donutIntervalguy = (donutMaker, element) => {
         if (i == donutMaker.length) {
             i = 0;
         }
-    }, 1000);} 
+    }, 25);} 
 })
     // wiringHelper.updateDonutCountDisplay(donutCount);
   // })
