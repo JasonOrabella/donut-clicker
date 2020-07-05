@@ -12,4 +12,5 @@ class DonutMaker {
   recordClick() {
     this._donutCount++;
   }
+
 }
