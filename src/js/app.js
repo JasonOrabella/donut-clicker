@@ -6,6 +6,10 @@ const donutCount = document.querySelector(".donut-count");
 const clickButton = document.querySelector(".click-button");
 const autoClickButton =document.querySelector(".autoClickButton")
 
+
+setInterval(donutMaker.addDonuts(),1000);
+setInterval(wiringHelper.updateDonutCountDisplay(donutCount),120);
+
 clickButton.addEventListener("click", () => {
   donutMaker.recordClick();
   wiringHelper.updateDonutCountDisplay(donutCount);
@@ -14,7 +18,7 @@ clickButton.addEventListener("click", () => {
 
 
 autoClickButton.addEventListener("click", () => {
-  donutMaker.recordClick();
+  donutMaker.addDonuts();
   wiringHelper.updateDonutCountDisplay(donutCount);
 });
 
@@ -28,11 +32,11 @@ autoClickButton.addEventListener("click", () => {
 // 		this.price = price;
 //     this.productivity = productivity;
   
+//   Autocookies{}
 
-// setInterval(donutMaker.createDonuts(this), 1000);
-//   }
+  // setInterval(donutMaker.addDonut(this), 1000);
+  // }
 // }
-//   function renew_cookies()
-// {	donutMaker.innerHTML = updateDonutCountDisplay;
-// }
+  // function renew_cookies()
+// {	donutMaker.innerHTML = updateDonutCountDisplay
 
