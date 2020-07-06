@@ -7,4 +7,7 @@ class HtmlWiringHelper {
   updateDonutCountDisplay(element) {
     element.innerText = this.donutMaker.getDonutCount();
   }
+  updateDonutCountDisplay(element) {
+    element.innerText = this.donutMaker.getDonutCount();
+  }
 }

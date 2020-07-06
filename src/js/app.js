@@ -9,50 +9,31 @@ const donutCount = document.querySelector(".donut-count");
 const clickButton = document.querySelector(".click-button");
 const autoClickButton = document.querySelector(".autoClickButton");
 
+
 clickButton.addEventListener("click", () => {
   donutMaker.recordClick();
   wiringHelper.updateDonutCountDisplay(donutCount);
 });
 
 autoClickButton.addEventListener("click", () => {
+  donutMaker.recordClick();
   wiringHelper.updateDonutCountDisplay(donutCount);
- donutIntervalguy = (donutMaker, element) => {
-    let i = 0;
-    setInterval(() => {
-        element.innerText = donutMaker[i];
-        i++;
-        if (i == donutMaker.length) {
-            i = 0;
-        }
-    }, 25);} 
-})
-    // wiringHelper.updateDonutCountDisplay(donutCount);
-  // })
- //donutAC.recordClick2();
- //donutMaker.recordClick();
- //while (true){
-  //donutMaker.recordClick();
-  //donutMaker.recordClick();
-  // myVar = setInterval(donutMaker.recordClick(),1000);
-  // myVar = setTimeout(1000);
+});
 
-// }
+class Building
+{
+	constructor(name, productivity, price)
+	{
+		this.name = name;
+		this.level = 0;
+		this.price = price;
+    this.productivity = productivity;
+  
 
-  // setInterval(function(){
-  //   donutMaker.recordClick(); }, 1000);
-  // wiringHelper.updateDonutCountDisplay(donutCount);
-// });
+setInterval(donutMaker.createDonuts.bind(this), 1000);
+  }
+}
+  function renew_cookies()
+{	donutMaker.innerHTML = updateDonutCountDisplay;
+}
 
-
-// function alertFunc() {
- 
-// }
-
-  // setInterval(function(){
-  //   donutMaker.recordClick(); }, );
-
-//}
-
-//   donutMaker.recordClick();
-//   wiringHelper.updateDonutCountDisplay(donutCount);
-// });
