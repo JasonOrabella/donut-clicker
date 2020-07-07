@@ -10,11 +10,11 @@ class DonutMaker {
     return this._donutCount;
   }
 
-  recordClick() {
-    this._donutCount++;
-    this._donutsProduced++;
+  recordClick(donutsPerClick) {
+    //this._donutCount++;
+    this._donutCount = this._donutCount +donutsPerClick;
   }
-  addDonuts(){
-    this._donutCount++
+  reduceDonuts(donutPrice){
+    this._donutCount = this._donutCount - donutPrice;
   }
 }
