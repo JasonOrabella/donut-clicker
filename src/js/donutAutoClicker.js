@@ -1,22 +1,25 @@
-export{donutAutoClicker};
+export { donutAutoClicker };
 
-
-class donutAutoClicker{
-
-    constructor(donutMaker) {
-        this.donutMaker = donutMaker;
-        this._autoClickerCount = 0;
-      }
+class donutAutoClicker {
+  constructor() {
+    this.acPrice = 100;
+    this.acLevel =0;
     
-      getDonutACCount() {
-        return this._autoClickerCount;
-      }
-    
-      recordClick2() {
-        this._autoClickerCount++;
-      }
+  }
 
-    //   autoIncrement(){
-    //       setInterval(this.donutMaker,1000);
-    //   }
+  getACCount() {
+    return this.acLevel;
+  }
+
+  getACPrice(){
+      return this.acPrice;
+  }
+
+  recordACClick() {
+    this.acLevel++;
+    this.acPrice *= 1.1;
+    //this.donutsPerClick *= 1.2;
+    // We need to reduce the number of donuts by price
+  }
+
 }

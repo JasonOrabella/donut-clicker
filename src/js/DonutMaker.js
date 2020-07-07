@@ -13,6 +13,10 @@ class DonutMaker {
     //this._donutCount++;
     this._donutCount = this._donutCount +donutsPerClick;
   }
+
+  increaseDonutsBy(donuts){
+    this._donutCount = this._donutCount + donuts;
+  }
   reduceDonuts(donutPrice){
     this._donutCount = this._donutCount - donutPrice;
   }
