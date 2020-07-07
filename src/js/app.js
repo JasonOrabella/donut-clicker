@@ -1,34 +1,54 @@
 import { DonutMaker } from "./DonutMaker.js";
 import { HtmlWiringHelper } from "./HtmlWiringHelper.js";
 import { donutAutoClicker} from "./donutAutoClicker.js";
+import {donutMultiplier} from "./donutMultiplier.js";
+
 const donutMaker = new DonutMaker();
 const donutAC = new donutAutoClicker(donutMaker);
-const wiringHelper = new HtmlWiringHelper(donutMaker);
+const donutM = new donutMultiplier();
+const wiringHelper = new HtmlWiringHelper(donutMaker,donutM);
+
 // const donutAutoClicker = new donutAutoClicker();
 const donutCount = document.querySelector(".donut-count");
 const clickButton = document.querySelector(".click-button");
 const autoClickButton = document.querySelector(".autoClickButton");
+const multiplierButton = document.querySelector(".multiplier");
+const multiplierLevel =  document.querySelector(".multiplier-level");
+const autoMultiplierCost = document.querySelector(".auto-multiplier-cost");
+//donut multiplier donuts *= 1.2
+//donut mulitplier cost =10 *=1.1.
+
+
+setInterval(donutMaker.recordClick(donutM.donutsPerClick),1000);
+//setInterval(wiringHelper.updateDonutCountDisplay(donutCount),250);
+//wiringHelper.updateMultiplierButtonDisplay(autoMultiplierCost);
+wiringHelper.updateDonutCountDisplay(donutCount);
+
+
 
 clickButton.addEventListener("click", () => {
-  donutMaker.recordClick();
+  donutMaker.recordClick(donutM.donutsPerClick);
   wiringHelper.updateDonutCountDisplay(donutCount);
+  
 });
 
-autoClickButton.addEventListener("click", () => {
- //donutAC.recordClick2();
- //donutMaker.recordClick();
- //while (true){
-  //donutMaker.recordClick();
-  //donutMaker.recordClick();
-  myVar = setInterval(donutMaker.recordClick(),1000);
-  // myVar = setTimeout(1000);
+multiplierButton.addEventListener("click", () => {
+  donutMaker.reduceDonuts(donutM.price);
   wiringHelper.updateDonutCountDisplay(donutCount);
-// }
+  
+  donutM.recordMultiplierClick();
+  wiringHelper.updateMultiplierCountDisplay(multiplierLevel);
+  wiringHelper.updateMultiplierButtonDisplay(autoMultiplierCost);
 
-  // setInterval(function(){
-  //   donutMaker.recordClick(); }, 1000);
+  
+
   // wiringHelper.updateDonutCountDisplay(donutCount);
 });
+autoClickButton.addEventListener("click", () => {
+  //donutMaker.makeDonuts();
+  wiringHelper.updateDonutCountDisplay(donutCount);
+});
+
 
 
 // function alertFunc() {
