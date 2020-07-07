@@ -38,14 +38,17 @@ clickButton.addEventListener("click", () => {
 });
 
 multiplierButton.addEventListener("click", () => {
+  if (donutMaker.getDonutCount() >= donutM.price){
   donutMaker.reduceDonuts(donutM.price);
   wiringHelper.updateDonutCountDisplay(donutCount);
   
   donutM.recordMultiplierClick();
   wiringHelper.updateMultiplierCountDisplay(multiplierLevel);
   wiringHelper.updateMultiplierButtonDisplay(autoMultiplierCost);
-
-  
+  }
+  else{
+    alert("Must Construct Additional Pylons")
+  }
 
   // wiringHelper.updateDonutCountDisplay(donutCount);
 });
