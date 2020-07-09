@@ -8,7 +8,6 @@ const donutAC = new donutAutoClicker();
 const donutM = new donutMultiplier();
 const wiringHelper = new HtmlWiringHelper(donutMaker,donutM,donutAC);
 
-
 const donutCount = document.querySelector(".donut-count");
 const clickButton = document.querySelector(".click-button");
 const autoClickButton = document.querySelector(".autoClickButton");
@@ -33,6 +32,7 @@ clickButton.addEventListener("click", () => {
 });
 
 multiplierButton.addEventListener("click", () => {
+
   if (donutMaker.getDonutCount() >= donutM.price){
   donutMaker.reduceDonuts(donutM.price);
   wiringHelper.updateDonutCountDisplay(donutCount);
@@ -42,11 +42,11 @@ multiplierButton.addEventListener("click", () => {
   wiringHelper.updateMultiplierButtonDisplay(autoMultiplierCost);
   }
   else{
-    alert("Must Construct Additional Pylons")
+   
   }
 });
-autoClickButton.addEventListener("click", () => {
 
+autoClickButton.addEventListener("click", () => {
   if (donutMaker.getDonutCount() >= donutAC.acPrice){
     donutMaker.reduceDonuts(donutAC.acPrice);
     wiringHelper.updateDonutCountDisplay(donutCount);
@@ -55,6 +55,8 @@ autoClickButton.addEventListener("click", () => {
     wiringHelper.updateACButtonDisplay(acPrice);
 
     setInterval(function(){ 
+      // donutMaker.recordClick(donutM.donutsPerClick);
+      // line above if the dones per click is supposed to be increased by multiplier
       donutMaker.increaseDonutsBy(donutAC.acLevel);
       wiringHelper.updateDonutCountDisplay(donutCount); }, 1000);
   }

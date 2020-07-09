@@ -2,7 +2,7 @@ export { donutAutoClicker };
 
 class donutAutoClicker {
   constructor() {
-    this.acPrice = 100;
+    this.acPrice = 10;
     this.acLevel =0;
     
   }
