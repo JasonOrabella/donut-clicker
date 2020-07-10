@@ -42,7 +42,7 @@ multiplierButton.addEventListener("click", () => {
   wiringHelper.updateMultiplierButtonDisplay(autoMultiplierCost);
   }
   else{
-    alert("Must Construct Additional Pylons")
+    // alert("Must Construct Additional Pylons")
   }
 });
 autoClickButton.addEventListener("click", () => {
